@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/abril_fatface</item>
+        <item>@font/aclonica</item>
+        <item>@font/adlam_display</item>
+        <item>@font/aladin</item>
+        <item>@font/alata</item>
+        <item>@font/allan</item>
+        <item>@font/antonio_thin</item>
+        <item>@font/artifika</item>
+        <item>@font/expletus_sans</item>
+        <item>@font/yeon_sung</item>
+    </array>
+</resources>

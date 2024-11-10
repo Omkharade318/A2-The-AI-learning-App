@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/a2_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/a2_logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.A2lytics"
+        tools:targetApi="31">
+        <activity
+            android:name=".drawer.Settings"
+            android:exported="false" />
+        <activity
+            android:name=".drawer.AboutUs"
+            android:exported="false" />
+        <activity
+            android:name=".drawer.Help"
+            android:exported="false" />
+        <activity
+            android:name=".drawer.Edit_Profile"
+            android:exported="false" />
+        <activity
+            android:name=".NotificationsAndMessages"
+            android:exported="false" />
+        <activity
+            android:name=".Log_In"
+            android:exported="false" />
+        <activity
+            android:name=".Sign_Up"
+            android:exported="false" />
+        <activity
+            android:name=".StartActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Splash_Screen"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

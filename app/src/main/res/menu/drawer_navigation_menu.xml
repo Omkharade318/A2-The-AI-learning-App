@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn = "drawer_navigation_menu">
+
+ <item
+     android:id="@+id/editProfile"
+     android:title="@string/edit_profile"
+     android:icon="@drawable/profile_icon"
+     />
+
+    <item
+        android:id="@+id/help"
+        android:title="@string/help"
+        android:icon="@drawable/help_icon"
+        />
+
+    <item
+        android:id="@+id/aboutUs"
+        android:title="@string/about_us"
+        android:icon="@drawable/aboutus_icon"
+        />
+
+    <item
+        android:id="@+id/settings"
+        android:title="@string/settings"
+        android:icon="@drawable/settings_icon"/>
+
+    <item
+        android:id="@+id/logOut"
+        android:title="@string/log_out"
+        android:icon="@drawable/logout_icon"/>
+
+
+</menu>
