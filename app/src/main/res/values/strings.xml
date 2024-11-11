@@ -59,9 +59,13 @@
     <string name="mobile_no">Mobile No</string>
     <string name="welcome_msg">Welcome to A2 \n The AI based learning platform</string>
     <string name="_2_address">2. Address</string>
-    <string name="enter_your_address_here">Enter your address here...</string>
+    <string name="enter_your_address_here">Enter your address here…</string>
     <string name="_3_educational_details">3. Educational Details</string>
     <string name="school_name">School Name</string>
     <string name="c_lass">Class</string>
     <string name="education_board">Education Board</string>
+    <string name="studying_image">studying image</string>
+    <string name="nourish_your_ninner_skills">Nourish your\ninner skills</string>
+    <string name="a">A</string>
+    <string name="your_ai_learning_journey_nbegins_here">Your AI learning journey \nbegins here</string>
 </resources>
