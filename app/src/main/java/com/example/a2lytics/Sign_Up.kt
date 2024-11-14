@@ -90,7 +90,7 @@ class Sign_Up : AppCompatActivity() {
             else{
                 Toast.makeText(
                     this,
-                    "Account Creation Failed",
+                    "Account Creation Failed : ${task.exception}",
                     Toast.LENGTH_SHORT
                 ).show()
                 Log.d("Account", "createAccount: Failure - ${task.exception}")
