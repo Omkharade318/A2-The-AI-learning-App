@@ -60,6 +60,6 @@ dependencies {
 
     implementation (libs.circleimageview) // Circle Image View
     implementation (libs.imageslideshow)  // Image Slider
-
+    implementation ("com.google.android.gms:play-services-auth:20.7.0")
 
 }
