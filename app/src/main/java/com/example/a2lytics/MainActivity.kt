@@ -17,6 +17,7 @@ import com.example.a2lytics.drawer.Edit_Profile
 import com.example.a2lytics.drawer.Help
 import com.example.a2lytics.drawer.Settings
 import com.google.android.material.navigation.NavigationView
+import com.google.firebase.auth.FirebaseAuth
 
 @Suppress("DEPRECATION")
 class MainActivity : AppCompatActivity() {
@@ -49,11 +50,10 @@ class MainActivity : AppCompatActivity() {
 
         // Set up notification icon click listener
         binding.notificationIcon.setOnClickListener {
-            Handler(Looper.getMainLooper()).postDelayed({
                 val intent = Intent(this, NotificationsAndMessages::class.java)
                 startActivity(intent)
-            }, 0)
-        }
+            }
+
 
         // Set up navigation drawer
         val humburgerButton = binding.humburgerButton
@@ -90,7 +90,10 @@ class MainActivity : AppCompatActivity() {
                     startActivity(Intent(this, Settings::class.java))
                 }
                 logOut -> {
+                    FirebaseAuth.getInstance().signOut()
+
                     startActivity(Intent(this, Log_In::class.java))
+                    finish()
                 }
             }
             true
