@@ -26,6 +26,7 @@
             android:id="@+id/voiceButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/white"
             android:background="@drawable/toggle_button_background_on"
             android:text="@string/voice"
             android:textSize="18sp"

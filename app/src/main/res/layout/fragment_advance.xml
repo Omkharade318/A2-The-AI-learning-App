@@ -18,11 +18,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/prompt"
+            android:textColor="@android:color/black"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:textColor="@android:color/black"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintBottom_toBottomOf="@+id/textButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <!-- Prompt EditText -->
 
@@ -31,7 +32,7 @@
             android:id="@+id/promptEditText_advance"
             android:layout_width="0dp"
             android:layout_height="150dp"
-            android:layout_marginTop="28dp"
+            android:layout_marginTop="20dp"
             android:autofillHints="prompt"
             android:background="@drawable/rounded_edittext"
             android:gravity="top|start"
@@ -51,12 +52,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/response"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="16dp"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:textColor="@android:color/black"
-            app:layout_constraintTop_toBottomOf="@id/promptEditText_advance"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="16dp" />
+            app:layout_constraintTop_toBottomOf="@+id/submitButton" />
 
 
         <!-- Response EditText -->
@@ -85,20 +86,21 @@
             android:id="@+id/submitButton"
             android:layout_width="170dp"
             android:layout_height="wrap_content"
-            android:text="@string/submit"
             android:background="@drawable/rounded_button"
+            android:text="@string/submit"
+            android:layout_marginTop="16dp"
             android:textColor="@android:color/white"
-            app:layout_constraintTop_toBottomOf="@id/responseEditText_advance"
-            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="16dp" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/promptEditText_advance" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/textButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/toggle_button_background_on"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="18sp"
             android:text="@string/text"
             app:layout_constraintEnd_toStartOf="@+id/voiceButton"
@@ -113,6 +115,23 @@
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/clearButton"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button"
+            android:clickable="true"
+            android:elevation="12dp"
+            android:focusable="true"
+            android:text="@string/clear"
+            android:layout_marginTop="16dp"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/responseEditText_advance"
+            app:layout_constraintWidth_percent="1.0" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

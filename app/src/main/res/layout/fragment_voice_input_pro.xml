@@ -27,6 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/toggle_button_background_on"
+        android:textColor="@color/white"
         android:text="@string/voice"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"

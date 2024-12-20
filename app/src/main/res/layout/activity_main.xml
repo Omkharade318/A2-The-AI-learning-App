@@ -106,6 +106,33 @@
             app:layout_constraintTop_toBottomOf="@id/cardView"
             app:navGraph="@navigation/navigation" />
 
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/share_with_friends"
+            android:textColor="#FC353434"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/button"
+            app:layout_constraintEnd_toStartOf="@+id/button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/button" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="48dp"
+            android:backgroundTint="#2196F3"
+            android:drawableLeft="@drawable/share_icon"
+            android:text="@string/share"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/smoothBottomBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="RtlHardcoded" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.navigation.NavigationView
@@ -120,5 +147,6 @@
         app:menu="@menu/drawer_navigation_menu"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"/>
+
 
 </androidx.drawerlayout.widget.DrawerLayout>

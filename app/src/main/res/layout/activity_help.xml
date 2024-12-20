@@ -55,6 +55,18 @@
                 app:layout_constraintTop_toTopOf="parent"
                 />
 
+            <Button
+                android:id="@+id/whatsappIcon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/round_button"
+                android:drawableTop="@drawable/whatsapp_logo"
+                android:elevation="10dp"
+                android:padding="7dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
@@ -63,7 +75,7 @@
           android:layout_width="0dp"
           android:layout_height="wrap_content"
           android:layout_margin="16dp"
-          android:backgroundTint="#c6e3f6"
+          android:backgroundTint="#FFFFFF"
           app:contentPaddingBottom="16dp"
           app:cardCornerRadius="15dp"
           app:layout_constraintBottom_toBottomOf="parent"
@@ -162,6 +174,7 @@
                   android:fontFamily="sans-serif"
                   android:text="@string/help_bottom"
                   android:textColor="@color/black"
+                  android:gravity="center"
                   android:paddingTop="8dp"
                   android:paddingHorizontal="16dp"
                   android:textSize="20sp"
