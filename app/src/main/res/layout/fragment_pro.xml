@@ -7,9 +7,14 @@
     android:background="@color/white"
     tools:context=".fragment.ProFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:padding="16dp">
 
         <!-- Prompt Label -->
@@ -25,38 +30,15 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/textButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:background="@drawable/toggle_button_background_on"
-            android:text="@string/text"
-            android:textColor="@color/white"
-            android:textSize="18sp"
-            app:layout_constraintEnd_toStartOf="@+id/voiceButton"
-            app:layout_constraintTop_toBottomOf="@+id/textView11" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/voiceButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:background="@drawable/toggle_button_background_off"
-            android:text="@string/voice"
-            android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView11" />
-
 
         <!-- Response Label -->
         <EditText
             android:id="@+id/promptEditText_pro"
             android:layout_width="0dp"
             android:layout_height="150dp"
-            android:layout_marginTop="8dp"
             android:autofillHints="prompt"
             android:background="@drawable/rounded_edittext"
+            android:layout_marginTop="16dp"
             android:gravity="top|start"
             android:hint="@string/enter_your_prompt"
             android:inputType="textMultiLine"
@@ -67,7 +49,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textButton" />
+            app:layout_constraintTop_toBottomOf="@+id/promptLabel" />
 
         <TextView
             android:id="@+id/responseLabel"
@@ -167,5 +149,7 @@
             app:layout_constraintWidth_percent="1.0" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
 
 </FrameLayout>

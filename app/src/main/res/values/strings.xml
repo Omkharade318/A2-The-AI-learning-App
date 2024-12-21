@@ -80,4 +80,5 @@
     <string name="name_of_your_school">Name of your School</string>
     <string name="name_of_your_education_board">Name of your Education Board</string>
     <string name="class_you_are_studying_in">Class you are studying in</string>
+    <string name="save_changes">Save Changes</string>
 </resources>

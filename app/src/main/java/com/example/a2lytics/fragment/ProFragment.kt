@@ -46,11 +46,6 @@ class ProFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        binding.voiceButton.setOnClickListener {
-            findNavController().navigate(R.id.action_proFragment_to_voiceInputProFragment)
-        }
-
     }
 
 

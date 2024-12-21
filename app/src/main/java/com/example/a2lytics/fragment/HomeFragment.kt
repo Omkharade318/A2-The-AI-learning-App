@@ -48,7 +48,7 @@ class HomeFragment : Fragment() {
             database.child("user").child(currentUserId).child("userName")
                 .addListenerForSingleValueEvent(object : ValueEventListener {
                     override fun onDataChange(snapshot: DataSnapshot) {
-                        val userName = R.id.name_text
+                        val userName = snapshot.value?.toString()
                         if (userName != null) {
                             // Update TextView with the user's name
                             binding.userName.text = "Hi, $userName"
@@ -62,7 +62,7 @@ class HomeFragment : Fragment() {
                     }
                 })
         } else {
-            binding.userName.text = "Hi, ${R.id.name_text}"
+            binding.userName.text = "Hi"
         }
 
         // Set up startLearningBtn click listener

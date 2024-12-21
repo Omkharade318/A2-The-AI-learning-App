@@ -163,5 +163,23 @@
         app:layout_constraintStart_toEndOf="@+id/detailSeekBar"
         app:layout_constraintTop_toTopOf="@+id/detailSeekBar" />
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/saveChangesBtn"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button"
+        android:clickable="true"
+        android:elevation="12dp"
+        android:focusable="true"
+        android:textAllCaps="false"
+        android:layout_marginTop="32dp"
+        android:text="@string/save_changes"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailSeekBar"
+        app:layout_constraintWidth_percent="1.0" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
