@@ -49,11 +49,11 @@
     <string name="the_system_response_will_appear_here">The system response will appear here…</string>
     <string name="upload_file">Upload File</string>
     <string name="upload">Upload</string>
-    <string name="a2_aboutus">A2lytics Private Limited is a growing software company focused on software development and training. We develop software in domains like enterprise solutions, web and mobile applications, data analytics, and digital marketing. We provide training in data science, deep learning, full-stack development, cloud computing, DevOps, and more. We also offer internships for Diploma, Engineering, BCA, and MCA students, allowing them to work on live projects.</string>
+    <string name="a2_aboutus">A2lytics Private Limited is a growing software company focused on software development and training.\n\nWe develop software in domains like enterprise solutions, web and mobile applications, data analytics, and digital marketing.\n\nWe provide training in data science, deep learning, full-stack development, cloud computing, DevOps, and more.\n\nWe also offer internships for Diploma, Engineering, BCA, and MCA students, allowing them to work on live projects.</string>
     <string name="help_header"><![CDATA[The \"A2\" app provides three user interfaces to interact with the AI model for task completion:]]></string>
     <string name="basicmode_text"><![CDATA[1. Basic Mode: Users enter their query text in the “PROMPT” field and click the “SUBMIT” button. The AI model’s response will be displayed in the “RESPONSE” field.]]></string>
     <string name="advanceMode_text"><![CDATA[2. Advanced Mode: Users can choose a format—either “TEXT” or “VOICE”—to input their query and receive a response. Then, they simply click “SUBMIT.”]]></string>
-    <string name="proMode_text"><![CDATA[3. Pro Mode: Users upload a “PDF” file to ask questions based on its content. As with Advanced Mode, they can select “TEXT” or “VOICE” to enter queries and receive responses.]]></string>
+    <string name="proMode_text"><![CDATA[3. Pro Mode: Users upload a “PDF” file to ask questions based on its content.]]></string>
     <string name="help_bottom"><![CDATA[For more assistance, please reach out via the provided WhatsApp contact on the top right corner.]]></string>
     <string name="_1_basic_information">1. Basic Information</string>
     <string name="mobile_no">Mobile No</string>
@@ -81,4 +81,6 @@
     <string name="name_of_your_education_board">Name of your Education Board</string>
     <string name="class_you_are_studying_in">Class you are studying in</string>
     <string name="save_changes">Save Changes</string>
+    <string name="what_you_say_will_be_displayed_here">What you say will be displayed here...</string>
+    <string name="click_here_to_start_recording">Click here to start recording 👉</string>
 </resources>

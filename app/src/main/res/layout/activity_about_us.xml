@@ -76,7 +76,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fontFamily="@font/adamina"
-            android:gravity="center"
             android:paddingHorizontal="16dp"
             android:paddingVertical="8dp"
             android:text="@string/a2_aboutus"
