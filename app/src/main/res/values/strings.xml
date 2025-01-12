@@ -3,7 +3,7 @@
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="or">Or</string>
-    <string name="name">User Name</string>
+    <string name="name">Name</string>
     <string name="continue_with">Continue With</string>
     <string name="google">Google</string>
     <string name="facebook">Facebook</string>
@@ -83,4 +83,7 @@
     <string name="save_changes">Save Changes</string>
     <string name="what_you_say_will_be_displayed_here">What you say will be displayed here...</string>
     <string name="click_here_to_start_recording">Click here to start recording 👉</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="enter_mobile_no">Enter Mobile No.</string>
+    <string name="enter_email">Enter Email</string>
 </resources>
