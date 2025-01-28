@@ -15,7 +15,7 @@ android {
     defaultConfig {
         applicationId = "com.example.a2lytics"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -77,7 +77,7 @@ dependencies {
     androidTestImplementation("androidx.room:room-testing:2.2.5")
 
     // Lifecycle components
-    implementation("androidx.lifecycle:lifecycle-extentions:2.2.0")
+    implementation("androidx.lifecycle:lifecycle-extensions:2.2.0")
     implementation("androidx.lifecycle:lifecycle-common-java8:2.2.0")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0")
 
