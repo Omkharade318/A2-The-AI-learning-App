@@ -32,7 +32,15 @@ class Edit_Profile : AppCompatActivity() {
         }
         userViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
 
-        binding.submitButton.setOnClickListener{
+        // Observe user data changes
+        userViewModel.readAllData.observe(this) { users ->
+            if (users.isNotEmpty()) {
+                val lastUser = users.last()
+                displayUserData(lastUser)
+            }
+        }
+
+        binding.submitButton.setOnClickListener {
             insertDataToDataBase()
         }
 
@@ -40,7 +48,34 @@ class Edit_Profile : AppCompatActivity() {
             finish()
         }
 
+        binding.editBtn.setOnClickListener {
+            setFieldsEditable(true)
+            Toast.makeText(this, "You can now edit your profile", Toast.LENGTH_SHORT).show()
+        }
+    }
 
+    private fun displayUserData(user: User) {
+        binding.apply {
+            userName.setText(user.userName)
+            userMobileNo.setText(user.mobileNumber)
+            userEmail.setText(user.email)
+            userAddress.setText(user.address)
+            schoolName.setText(user.schoolName)
+            educationBoard.setText(user.educationBoard)
+            userClass.setText(user.userClass)
+        }
+    }
+
+    private fun setFieldsEditable(editable: Boolean) {
+        binding.apply {
+            userName.isEnabled = editable
+            userMobileNo.isEnabled = editable
+            userEmail.isEnabled = editable
+            userAddress.isEnabled = editable
+            schoolName.isEnabled = editable
+            educationBoard.isEnabled = editable
+            userClass.isEnabled = editable
+        }
     }
 
     private fun insertDataToDataBase() {
@@ -62,22 +97,37 @@ class Edit_Profile : AppCompatActivity() {
                 schoolName = schoolName,
                 educationBoard = educationBoardName,
                 userClass = userClass
-                )
+            )
 
             userViewModel.addUser(user)
             Toast.makeText(this, "Successfully added!", Toast.LENGTH_LONG).show()
-        }
-        else{
+            
+            // Make fields uneditable after saving
+            setFieldsEditable(false)
+            
+            // Change button text to indicate edit mode
+            binding.submitButton.text = "Edit"
+            
+            // Change button click listener to toggle edit mode
+            binding.submitButton.setOnClickListener {
+                val isEditing = binding.userName.isEnabled
+                if (isEditing) {
+                    insertDataToDataBase()
+                } else {
+                    setFieldsEditable(true)
+                    binding.submitButton.text = "Save"
+                }
+            }
+        } else {
             Toast.makeText(this, "Please fill out all fields.", Toast.LENGTH_LONG).show()
         }
     }
 
-    private fun  inputCheck(name: String, mobileNo: String, email: String, address: String, schoolName: String, educationBoardName: String, userClass: String): Boolean{
-       return !(
-               TextUtils.isEmpty(name) && TextUtils.isEmpty(mobileNo) &&
-               TextUtils.isEmpty(email) && TextUtils.isEmpty(address) &&
-               TextUtils.isEmpty(schoolName) && TextUtils.isEmpty(educationBoardName) &&
-               TextUtils.isEmpty(userClass)
-               )
+    private fun inputCheck(name: String, mobileNo: String, email: String, address: String, 
+                         schoolName: String, educationBoardName: String, userClass: String): Boolean {
+        return !(TextUtils.isEmpty(name) || TextUtils.isEmpty(mobileNo) ||
+                TextUtils.isEmpty(email) || TextUtils.isEmpty(address) ||
+                TextUtils.isEmpty(schoolName) || TextUtils.isEmpty(educationBoardName) ||
+                TextUtils.isEmpty(userClass))
     }
 }
